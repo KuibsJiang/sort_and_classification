@@ -1,0 +1,56 @@
+#!/usr/bin/python
+# coding=utf-8
+
+#需求：将列表中学生信息按性别分类并排序，lady first
+#      分别打印出列表信息，女生信息，男生信息，排序后的列表信息
+
+
+class classroom:
+    def __init__(self):
+        pass
+
+    def fenlei_lady(seif): #列表信息按性别女排序
+        sexlist = []
+        for student in studentlist:
+            if student[0] == '女':
+                sexlist.append(student)
+        sexlist.sort()
+        return sexlist
+
+    def fenlei_gentleman(seif): #列表信息按性别男排序
+        sexlist = []
+        for student in studentlist:
+            if student[0] == '男':
+                sexlist.append(student)
+        sexlist.sort()
+        return sexlist
+
+if __name__ == '__main__':
+    student1 = ['女', 13]
+    student2 = ['女', 15]
+    student3 = ['男', 4]
+    student4 = ['女', 6]
+    student5 = ['男', 23]
+    student6 = ['男', 31]
+    student7 = ['女', 43]
+    student8 = ['男', 26]
+    student9 = ['女', 27]
+    student10 = ['男', 19]
+    studentlist = [student1, student2, student3, student4, student5, student6, student7, student8, student9, student10]
+
+    print(studentlist)
+    list1 = classroom.fenlei_lady(studentlist)
+    print(list1)
+    list2 = classroom.fenlei_gentleman(studentlist)
+    print(list2)
+    newlist = []
+    for item in list1:
+        newlist.append(item)
+    for item in list2:
+        newlist.append(item)
+    print(newlist)  # method1
+    print(list1+list2) #method2
+    list1.extend(list2)
+    print(list1)#method3
+
+
